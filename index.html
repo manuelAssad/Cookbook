@@ -6,10 +6,12 @@
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue|Open+Sans" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Grotesk|Open+Sans" />
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- endbuild -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Grotesk|Open+Sans" />
 
     <title>Cookbook: Anyone can be a good cook!</title>
 </head>
@@ -18,8 +20,8 @@
 
     </header>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-            
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        
         <a class="navbar-brand hvr-grow" href="#">COOK<span class="navbar-brand-light">BOOK</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -33,7 +35,7 @@
                 <li class="nav-item px-3 mb-sm-3 mb-3 mb-lg-0"><a class="nav-link" href="#contact"> Contact</a></li>
 
             </ul>
-           
+            
                 <div class="navbar-text ml-lg-auto pr-5 hvr-grow">
                     <a role="button" data-toggle="modal" data-target="#loginModal" class="btn btn-color1">
                         <i class="fa fa-sign-in"></i> LOGOUT
@@ -44,53 +46,56 @@
 
     </nav>
 
-        <div id="homeCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#homeCarousel" data-slide-to="1"></li>
-                <li data-target="#homeCarousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="image-gradient">
-                        <img class="d-block w-100" src="https://www.ochd.org/wp-content/uploads/2020/01/g-shopping-1200x630.jpg" alt="Breadcrumb Trail Campground"/>
-                    </div>
-                    <div class="carousel-caption">
-                        <h1>Intuitive Grocery List</h1>
-                        <p class="mt-sm-5 px-5 carousel-body">Easily add items to grocery list and it will automatically be grouped into categories to save you time while shopping!</p>
-                        <button class="btn btn-sm px-3 px-md-5 py-1 py-sm-2 mt-1 mt-sm-4 btn-color2 hvr-grow"> TAKE ME THERE</button>
-                    </div>
+    <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#homeCarousel" data-slide-to="1"></li>
+            <li data-target="#homeCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="image-gradient">
+                    <img class="d-block w-100" src="https://www.ochd.org/wp-content/uploads/2020/01/g-shopping-1200x630.jpg" alt="Breadcrumb Trail Campground"/>
                 </div>
-                <div class="carousel-item">
-                    <div class="image-gradient">
-                        <img class="d-block w-100" src="https://www.cscassets.com/recipes/wide_cknew/wide_24548.jpg" alt="Breadcrumb Trail Campground"/>
-                    </div>
-                    <div class="carousel-caption">
-                        <h1>Enjoy your favorite dishes</h1>
-                        <p class="mt-sm-5 px-5 carousel-body">Browse through our recipe list and find your favorite dish and with a click of a button add all its ingredients to your grocery list! </p>
-                        <button class="btn btn-sm px-3 px-md-5 py-1 py-sm-2 mt-1 mt-sm-4 btn-color2 hvr-grow"> TAKE ME THERE</button>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="image-gradient">
-                        <img class="d-block w-100" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/241102388_10157948487811277_1316200517677172659_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=973b4a&_nc_ohc=y6H2upJ_rn4AX--oh51&_nc_ht=scontent-sjc3-1.xx&oh=c7c342416e62e13ee22a166edea10eae&oe=616BD283" alt="Breadcrumb Trail Campground"/>
-                    </div>
-                    <div class="carousel-caption">
-                        <h1>Create your own Recipe</h1>
-                        <p class="mt-sm-5 px-5 carousel-body">If you couldn't find the recipe you want you can easily create your own recipe so that you make sure next time you go grocery shopping, you get all you need! </p>
-                        <button class="btn btn-sm px-3 px-md-5 py-1 py-sm-2 mt-1 mt-sm-4 btn-color2 hvr-grow"> TAKE ME THERE</button>
-                    </div>
+                <div class="carousel-caption">
+                    <h1>Intuitive Grocery List</h1>
+                    <p class="mt-sm-5 px-5 carousel-body">Easily add items to grocery list and it will automatically be grouped into categories to save you time while shopping!</p>
+                    <button class="btn btn-sm px-3 px-md-5 py-1 py-sm-2 mt-1 mt-sm-4 btn-color2 hvr-grow"> TAKE ME THERE</button>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev" >
-                <span class="carousel-control-prev-icon"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next" >
-                <span class="carousel-control-next-icon"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <div class="carousel-item">
+                <div class="image-gradient">
+                    <img class="d-block w-100" src="https://www.cscassets.com/recipes/wide_cknew/wide_24548.jpg" alt="Breadcrumb Trail Campground"/>
+                </div>
+                <div class="carousel-caption">
+                    <h1>Enjoy your favorite dishes</h1>
+                    <p class="mt-sm-5 px-5 carousel-body">Browse through our recipe list and find your favorite dish and with a click of a button add all its ingredients to your grocery list! </p>
+                    <button class="btn btn-sm px-3 px-md-5 py-1 py-sm-2 mt-1 mt-sm-4 btn-color2 hvr-grow"> TAKE ME THERE</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="image-gradient">
+                    <img class="d-block w-100" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/241102388_10157948487811277_1316200517677172659_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=973b4a&_nc_ohc=y6H2upJ_rn4AX--oh51&_nc_ht=scontent-sjc3-1.xx&oh=c7c342416e62e13ee22a166edea10eae&oe=616BD283" alt="Breadcrumb Trail Campground"/>
+                </div>
+                <div class="carousel-caption">
+                    <h1>Create your own Recipe</h1>
+                    <p class="mt-sm-5 px-5 carousel-body">If you couldn't find the recipe you want you can easily create your own recipe so that you make sure next time you go grocery shopping, you get all you need! </p>
+                    <button class="btn btn-sm px-3 px-md-5 py-1 py-sm-2 mt-1 mt-sm-4 btn-color2 hvr-grow"> TAKE ME THERE</button>
+                </div>
+            </div>
         </div>
+        <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev" >
+            <span class="carousel-control-prev-icon"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next" >
+            <span class="carousel-control-next-icon"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+
     <div class="container" id="about">
         <div class="row">
             <h2 class="mx-auto mt-3 mt-md-5">
@@ -302,8 +307,11 @@
     </footer>
 
 
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- endbuild -->
+    
 </body>
 </html>
