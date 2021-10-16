@@ -505,3 +505,93 @@ a,a:hover{
     height:100vh;
     background-color: rgba(0,0,0,0);;
 }
+
+
+
+
+
+
+.list-group-item-action:active {
+    color: #212529;
+    background-color: #e9ecef;
+  }
+  
+
+  
+.list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: #7ca982;
+    border-color: #7ca982;
+}
+
+.card{
+    border-color: #7ca982 ;
+}
+
+.grocery-edit-btn, .grocery-edit-btn:hover{
+    display: none;
+    background-color: #7ca982;
+    color:#f1f7ed;
+}
+
+
+
+.card:hover{
+    border-color: #243e36 ;
+    position: relative;
+    border-width: 1px 1px 0 1px;
+    border-radius: 3px 3px 0 0 ;
+    .grocery-edit-btn{
+        display: block;
+        background-color: #7ca982;
+        border-color: #243e36 ;
+        border-radius: 0 0 3px 3px;
+        border-width: 0 1px 1px 1px;
+        position: absolute;
+        top:100% ;
+        width:calc(100% + 2px);
+        margin-left: -1px;   
+        margin-top: -1px;   
+        z-index: 99;
+
+
+    }
+    .grocery-edit-btn:hover{
+        display: block;
+    }
+}
+
+.card-header {
+    font-size: 18px;
+    text-align: center;
+    background-color: #f1f7ed;
+    border-color: #e0eec6 ;
+}
+.card-header:hover{
+    background-color: #e0eec6;
+    cursor: pointer;
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
+
+.card-image{
+    width:80px;
+    height:80px;
+    position: relative;
+    z-index: 999;
+    object-fit: contain;
+}
+
+.card-body{
+    padding: 0;
+}
+
+.sticky-menu{
+    position: fixed;
+}
+
+.grocery-container{
+    min-height: 250px;
+}
+

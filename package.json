@@ -4,6 +4,7 @@
   "description": "Nucamp Project Portfolio 1",
   "main": "index.html",
   "scripts": {
+    "scss": "node-sass -o css/ css/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server",
     "start": "npm run watch:all",
@@ -21,6 +22,7 @@
     "copyfiles": "^2.2.0",
     "imagemin-cli": "^5.1.0",
     "lite-server": "^2.6.1",
+    "node-sass": "^6.0.1",
     "onchange": "^7.0.0",
     "parallelshell": "3.0.1",
     "rimraf": "^3.0.2",
