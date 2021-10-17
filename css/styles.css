@@ -1,5 +1,7 @@
-body {
-  font-family: Space Grotesk; }
+gtml, body {
+  font-family: Space Grotesk;
+  max-width: 100%;
+  overflow-x: hidden; }
 
 h1 {
   font-weight: 600;
@@ -405,37 +407,55 @@ a, a:hover {
   background-color: #7ca982;
   color: #f1f7ed; }
 
-.card:hover {
-  border-color: #243e36;
-  position: relative;
-  border-width: 1px 1px 0 1px;
-  border-radius: 3px 3px 0 0; }
-  .card:hover .grocery-edit-btn {
-    display: block;
-    background-color: #7ca982;
+@media (min-width: 992px) {
+  .card:hover {
     border-color: #243e36;
-    border-radius: 0 0 3px 3px;
-    border-width: 0 1px 1px 1px;
-    position: absolute;
-    top: 100%;
-    width: calc(100% + 2px);
-    margin-left: -1px;
-    margin-top: -1px;
-    z-index: 99; }
-  .card:hover .grocery-edit-btn:hover {
-    display: block; }
+    position: relative;
+    border-width: 2px 2px 0 2px;
+    border-radius: 3px 3px 0 0; }
+    .card:hover .grocery-edit-btn {
+      display: block;
+      background-color: #7ca982;
+      border-color: #243e36;
+      border-radius: 0 0 3px 3px;
+      border-width: 0 2px 2px 2px;
+      position: absolute;
+      top: 100%;
+      width: calc(100% + 4px);
+      margin-left: -2px;
+      margin-top: -1px;
+      z-index: 99; }
+    .card:hover .grocery-edit-btn:hover {
+      display: block; }
+    .card:hover .card-header:hover {
+      background-color: #e0eec6;
+      cursor: pointer;
+      text-decoration: line-through;
+      text-decoration-color: red; } }
+
+@media (max-width: 992px) {
+  .card-header {
+    font-size: 12px !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 2px  !important;
+    padding-left: 2px !important;
+    padding-bottom: 4px; }
+  .card {
+    background-color: #f1f7ed; }
+  .card:hover {
+    background-color: #e0eec6; }
+    .card:hover .card-header {
+      background-color: #e0eec6; } }
 
 .card-header {
+  border-width: 0px;
   font-size: 18px;
   text-align: center;
   background-color: #f1f7ed;
-  border-color: #e0eec6; }
-
-.card-header:hover {
-  background-color: #e0eec6;
-  cursor: pointer;
-  text-decoration: line-through;
-  text-decoration-color: red; }
+  border-color: #e0eec6;
+  white-space: nowrap; }
 
 .card-image {
   width: 80px;
@@ -452,3 +472,44 @@ a, a:hover {
 
 .grocery-container {
   min-height: 250px; }
+
+.small-card-padding {
+  padding: 1px; }
+
+.border-r-top-left {
+  border-radius: 10px 0 0 0 !important; }
+
+.border-r-top-right {
+  border-radius: 0 10px 0 0 !important; }
+
+.border-r-bottom-right {
+  border-radius: 0 0 10px 0; }
+
+.border-r-bottom-left {
+  border-radius: 0 0 0 10px; }
+
+.border-r-none {
+  border-radius: 0; }
+
+.edit-recipe-icon {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  color: #7ca982; }
+
+.edit-recipe-container {
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0; }
+
+.grocery-sec-header {
+  border: #e0eec6 solid 1px;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #f1f7ed;
+  margin-bottom: 4px; }
