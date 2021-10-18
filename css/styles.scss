@@ -709,6 +709,15 @@ a,a:hover{
     margin-left:-16px
 }
 
+.btn-ing-search{
+    background-color: #e0eec6;
+    color:#243e36 !important;
+    border-color: #ced4da;
+    padding:0 30px;
+    border-radius: 0 3px 0 0 !important; 
+    display: none;
+}
+
 @media (min-width: 992px) {
     .ingredient-search{
         border-radius: 3px 3px 0 0;
@@ -724,19 +733,12 @@ a,a:hover{
         padding-bottom: 3px;
     }
     .btn-ing-search{
-        border-radius: 0 3px 0 0 !important;    
+        display: block;
     }
-    
 }
 
 
-.btn-ing-search{
-    background-color: #e0eec6;
-    color:#243e36 !important;
-    border-color: #ced4da;
-    padding:0 30px;
-    border-radius: 0px !important;
-}
+
 
 
 .button-ing-text{
