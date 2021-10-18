@@ -43,20 +43,99 @@
             
         </div>
 
+        <div class="input-group d-flex d-lg-none">
+            <label for="ingredient" class="input-group-prepend">
+                <span  class="input-group-text ingredient-search bg-ing" id="basic-addon1"><i class="fa fa-search ml-auto hvr-grow"></i></span>
+            </label>
+            <input id="ingredient" type="text" class="form-control ingredient-search ingredient-search-input" placeholder="Search for Ingredient" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            </input>
+            <div class="input-group-append">
+              <a class="btn btn-ing-search ingredient-search" role="button" type="button"><span class="d-flex button-ing-text">+ Add</span></a>
+            </div>
+            <div class="search-box">
+    
+                <div class="search-cat">Suggested Items</div>
+                <div class="mb-1 ml-1">Bread</div>
+                <div class="mb-1 ml-1">Jam</div>
+                <div class="mb-1 ml-1">Honey</div>
+                <div class="mb-1 ml-1">Tomatoes</div>
+                <div class="mb-1 ml-1">Apples</div>
+                <div class="search-cat">Bakery</div>
+                <div class="mb-1 ml-1">Bread</div>
+                <div class="mb-1 ml-1">Jam</div>
+                <div class="mb-1 ml-1">Honey</div>
+                <div class="mb-1 ml-1">Tomatoes</div>
+                <div class="mb-1 ml-1">Apples</div>
+                <div class="search-cat">Breakfast & Cereal</div>
+                <div class="mb-1 ml-1">Cucumber</div>
+                <div class="mb-1 ml-1">Bread</div>
+                <div class="mb-1 ml-1">Jam</div>
+                <div class="mb-1 ml-1">Honey</div>
+                <div class="mb-1 ml-1">Tomatoes</div>
+                <div class="search-cat">Dairy</div>
+                <div class="mb-1 ml-1">Apples</div>
+                <div class="mb-1 ml-1">Cucumber</div>
+                
+            </div>
+            
+        </div>
+    
+
     </nav>
+
+ 
     <div class="container grocery-container">
         <div class="row">
             <div class="d-none d-lg-block col-lg-4 col-xl-3 py-5 sticky-menu ">
                 <div class="list-group" id="list-tab" role="tablist">
-                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Bakery</a>
-                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Breakfast & Cereal</a>
+                  
+                        <div class="input-group ing-search-container">
+                            <label for="ingredient" class="input-group-prepend">
+                                <span  class="input-group-text ingredient-search bg-ing" id="basic-addon1"><i class="fa fa-search ml-auto hvr-grow"></i></span>
+                            </label>
+                            <input id="ingredient" type="text" class="form-control ingredient-search ingredient-search-input" placeholder="Search for Ingredient" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            </input>
+                            <div class="input-group-append">
+                              <a class="btn btn-ing-search ingredient-search" role="button" type="button"><span class="d-flex button-ing-text">+ Add</span></a>
+                            </div>
+                            <div class="search-box">
+
+                                <div class="search-cat">Suggested Items</div>
+                                <div class="mb-1 ml-1">Bread</div>
+                                <div class="mb-1 ml-1">Jam</div>
+                                <div class="mb-1 ml-1">Honey</div>
+                                <div class="mb-1 ml-1">Tomatoes</div>
+                                <div class="mb-1 ml-1">Apples</div>
+                                <div class="search-cat">Bakery</div>
+                                <div class="mb-1 ml-1">Bread</div>
+                                <div class="mb-1 ml-1">Jam</div>
+                                <div class="mb-1 ml-1">Honey</div>
+                                <div class="mb-1 ml-1">Tomatoes</div>
+                                <div class="mb-1 ml-1">Apples</div>
+                                <div class="search-cat">Breakfast & Cereal</div>
+                                <div class="mb-1 ml-1">Cucumber</div>
+                                <div class="mb-1 ml-1">Bread</div>
+                                <div class="mb-1 ml-1">Jam</div>
+                                <div class="mb-1 ml-1">Honey</div>
+                                <div class="mb-1 ml-1">Tomatoes</div>
+                                <div class="search-cat">Dairy</div>
+                                <div class="mb-1 ml-1">Apples</div>
+                                <div class="mb-1 ml-1">Cucumber</div>
+                                
+                            </div>
+                            
+                        </div>
+                    
+                
+                    <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Bakery</a>
+                    <a class="list-group-item list-group-item-action active" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Breakfast & Cereal</a>
                     <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Dairy</a>
                     <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Housing & Cleaning</a>
                 </div>
             </div>
             <div class="col-md-12 col-lg-7 col-xl-8 offset-xl-4 offset-lg-5 pt-lg-5">
               <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                <div class="tab-pane fade" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
                     <div class="container mb-2">
                         <div class="row mt-3 mt-lg-0">
                             <h3 class="grocery-sec-header">Bakery <small>(12 Items)</small></h3>
@@ -626,7 +705,7 @@
 
 
 
-                <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                <div class="tab-pane fade show active" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
                     <div class="container">
                         <div class="row mt-2 mt-lg-0">
                             <h3 class="grocery-sec-header">Breakfast & Cereal <small>(12 Items)</small></h3>
