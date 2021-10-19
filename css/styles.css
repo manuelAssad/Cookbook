@@ -495,7 +495,7 @@ a, a:hover {
   width: 80px;
   height: 80px;
   position: relative;
-  z-index: 999;
+  z-index: 98;
   object-fit: contain; }
 
 .card-body {
@@ -665,6 +665,18 @@ a, a:hover {
   border-radius: 3px;
   color: white;
   font-size: 12px; }
+
+.restore-default-button {
+  position: absolute;
+  z-index: 999;
+  bottom: 3px;
+  right: 3px;
+  background-color: #7ca982;
+  padding: 3px;
+  border-radius: 3px;
+  color: #f1f7ed;
+  font-size: 12px;
+  cursor: pointer; }
 
 .custom-image {
   position: absolute;
