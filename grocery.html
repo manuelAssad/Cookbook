@@ -29,8 +29,8 @@
         </button> 
         <div class="collapse navbar-collapse" id="nucampNavbar">      
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item px-3 px-lg-0 pr-lg-3 mb-3 mb-lg-0 active"><a class="nav-link" href="index.html"> Home</a></li>
-                <li class="nav-item px-3 mb-sm-3 mb-3 mb-lg-0"><a class="nav-link" href="#">My List</a></li>
+                <li class="nav-item px-3 px-lg-0 pr-lg-3 mb-3 mb-lg-0"><a class="nav-link" href="index.html"> Home</a></li>
+                <li class="nav-item px-3 mb-sm-3 mb-3 mb-lg-0 active"><a class="nav-link" href="#">My List</a></li>
                 <li class="nav-item px-3 mb-sm-3 mb-3 mb-lg-0"><a class="nav-link" href="recipe.html"> Recipes</a></li>
 
             </ul>
@@ -49,9 +49,7 @@
             </label>
             <input id="ingredient" type="text" class="form-control ingredient-search ingredient-search-input" placeholder="Search for Ingredient" aria-label="Recipient's username" aria-describedby="basic-addon2">
             </input>
-            <div class="input-group-append">
-              <a class="btn btn-ing-search ingredient-search" role="button" type="button"><span class="d-flex button-ing-text">+ Add</span></a>
-            </div>
+           
             <div class="search-box">
     
                 <div class="search-cat">Suggested Items</div>
@@ -61,9 +59,9 @@
                 <div class="mb-1 pb-2 ml-1 border-bottom">Tomatoes</div>
                 <div class="mb-1 pb-2 ml-1 border-bottom">Apples</div>
                 <div class="search-cat">Bakery</div>
-                <div class="mb-1 pb-2 ml-1 border-bottom">Bread</div>
+                <div class="mb-1 pb-2 ml-1 border-bottom added-item">Bread</div>
                 <div class="mb-1 pb-2 ml-1 border-bottom">Jam</div>
-                <div class="mb-1 pb-2 ml-1 border-bottom">Honey</div>
+                <div class="mb-1 pb-2 ml-1 border-bottom added-item">Honey</div>
                 <div class="mb-1 pb-2 ml-1 border-bottom">Tomatoes</div>
                 <div class="mb-1 pb-2 ml-1 border-bottom">Apples</div>
                 <div class="search-cat">Breakfast & Cereal</div>
@@ -84,17 +82,172 @@
 
     </nav>
 
- 
+
+    <div id="groceryModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header  lightgreen-bg">
+                    <h3 class="modal-title ml-auto pl-4">Edit Bread</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-row">
+                          
+                                <div class="row">
+                                    <div class="col-5 pr-0">
+                                        <img src="https://www.seekpng.com/png/full/863-8638070_bread-png-image-fresh-bread.png"  class="grocery-modal-image img-fluid d-flex img-thumbnail" alt="responsive image"/>
+                                        <div class="default-button">
+                                            Default Image
+                                        </div>
+                                        <div class="custom-image">
+                                            Upload custom image 
+                                        </div>
+                                    </div>
+                                
+                                
+                                    <div class="col-7 align-self-center">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <input type="text" class="form-control form-control-sm" id="groceryName" value="Bread" placeholder="Item name">
+                                            </div>
+                                            <div class="col-12">
+                                                <textarea class="form-control mt-2" id="groceryDetail" name="message" rows="3" placeholder="Note (quantity, description)"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           
+                            </div>
+                            
+                            
+                            <div class="form-group mt-5 row">
+                                <label for="categorySelect" class="col d-none d-md-block">Category:</label>
+                                <label for="categorySelect" class="col mb-2 d-block d-md-none">Category:</label>
+                                <select class="form-control col-11 col-md-9 mr-2 ml-2 ml-md-0" id="categorySelect">
+                                  <option>Bakery</option>
+                                  <option>Breakfast & Cereal</option>
+                                  <option>Dairy</option>
+                                  <option>Housing & Cleaning</option>
+                                </select>
+                            </div>
+                           
+                            <div class="form-row mt-5">
+                                <div class="col-6">
+                                    <button type="button" class="btn grocery-modal-button-1">SAVE</button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="submit" class="btn grocery-modal-button-2" data-dismiss="modal">CANCEL</button>
+                                </div>
+                            </div>
+                             
+                          
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="groceryModal2" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header lightgreen-bg">
+                    <h3 class="modal-title ml-auto pl-4">Edit Bread</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-row">
+                          
+                                <div class="row">
+                                    <div class="col-5 pr-0">
+                                        <img src="https://www.arnoldbread.com/sites/all/files/Full%20Naked%20Loaf_0.png"  class="grocery-modal-image img-fluid d-flex img-thumbnail" alt="responsive image"/>
+                                       
+                                        <div class="custom-image">
+                                            Change custom image 
+                                        </div>
+                                    </div>
+                                
+                                
+                                    <div class="col-7 align-self-center">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <input type="text" class="form-control form-control-sm" id="groceryName" value="Bread" placeholder="Item name">
+                                            </div>
+                                            <div class="col-12">
+                                                <textarea class="form-control mt-2" id="groceryDetail" name="message" rows="3" placeholder="Note (quantity, description)">wheat</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           
+                            </div>
+
+                            <div class="form-check mt-4 checkbox-grocery d-none">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label checkbox-label-grocery"  for="flexCheckChecked">
+                                  Use default image
+                                </label>
+                            </div>
+                              
+                            <div class="form-check mt-1 checkbox-grocery d-none">
+                                <input class="form-check-input" disabled type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label checkbox-label-grocery"  for="flexCheckChecked">
+                                  Make this the default image for "Bread"
+                                </label>
+                            </div>
+                          
+                            <div class="form-check checkbox-grocery mt-2 d-none">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label checkbox-label-grocery" for="flexCheckChecked">
+                                  Make this the default image for "Bread" having the following keyword:
+                                </label>
+                                <input type="text" class="form-control form-control-sm" id="groceryKeyword" value="wheat" placeholder="Enter keyword here">
+                            </div>
+
+                            <div class="form-group mt-5 row">
+                                <label for="categorySelect" class="col d-none d-md-block">Category:</label>
+                                <label for="categorySelect" class="col mb-2 d-block d-md-none">Category:</label>
+                                <select class="form-control col-11 col-md-9 mr-2 ml-2 ml-md-0" id="categorySelect">
+                                  <option>Bakery</option>
+                                  <option>Breakfast & Cereal</option>
+                                  <option>Dairy</option>
+                                  <option>Housing & Cleaning</option>
+                                </select>
+                            </div>
+
+                            <div class="form-row mt-5">
+                                <div class="col-6">
+                                    <button type="button" class="btn grocery-modal-button-1">SAVE</button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="submit" class="btn grocery-modal-button-2" data-dismiss="modal">CANCEL</button>
+                                </div>
+                            </div>
+                             
+                           
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="container grocery-container">
         <div class="row">
             <div class="d-none d-lg-block col-lg-4 col-xl-3 py-5 sticky-menu ">
                 <div class="list-group" id="list-tab" role="tablist">
                   
-                        <div class="input-group ing-search-container">
-                            <label for="ingredient" class="input-group-prepend">
+                        <div class="input-group ing-search-container mb-2">
+                            <label for="ingredient2" class="input-group-prepend">
                                 <span  class="input-group-text ingredient-search bg-ing" id="basic-addon1"><i class="fa fa-search ml-auto hvr-grow"></i></span>
                             </label>
-                            <input id="ingredient" type="text" class="form-control ingredient-search ingredient-search-input" placeholder="Search for Ingredient" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <input id="ingredient2" type="text" class="form-control ingredient-search ingredient-search-input" placeholder="Search for Ingredient" aria-label="Recipient's username" aria-describedby="basic-addon2">
                             </input>
                             <div class="input-group-append">
                               <a class="btn btn-ing-search ingredient-search" role="button" type="button"><span class="d-flex button-ing-text">+ Add</span></a>
@@ -102,26 +255,26 @@
                             <div class="search-box">
 
                                 <div class="search-cat">Suggested Items</div>
-                                <div class="mb-1 ml-1">Bread</div>
-                                <div class="mb-1 ml-1">Jam</div>
-                                <div class="mb-1 ml-1">Honey</div>
-                                <div class="mb-1 ml-1">Tomatoes</div>
-                                <div class="mb-1 ml-1">Apples</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom">Bread</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom">Jam</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom">Honey</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom">Tomatoes</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom">Apples</div>
                                 <div class="search-cat">Bakery</div>
-                                <div class="mb-1 ml-1">Bread</div>
-                                <div class="mb-1 ml-1">Jam</div>
-                                <div class="mb-1 ml-1">Honey</div>
-                                <div class="mb-1 ml-1">Tomatoes</div>
-                                <div class="mb-1 ml-1">Apples</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom added-item">Bread</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom">Jam</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom added-item">Honey</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom">Tomatoes</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom">Apples</div>
                                 <div class="search-cat">Breakfast & Cereal</div>
-                                <div class="mb-1 ml-1">Cucumber</div>
-                                <div class="mb-1 ml-1">Bread</div>
-                                <div class="mb-1 ml-1">Jam</div>
-                                <div class="mb-1 ml-1">Honey</div>
-                                <div class="mb-1 ml-1">Tomatoes</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom">Cucumber</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom">Bread</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom">Jam</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom">Honey</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom">Tomatoes</div>
                                 <div class="search-cat">Dairy</div>
-                                <div class="mb-1 ml-1">Apples</div>
-                                <div class="mb-1 ml-1">Cucumber</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom">Apples</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom">Cucumber</div>
                                 
                             </div>
                             
@@ -145,16 +298,24 @@
                             <div class="col-xl-3 col-lg-4 col-md-3 col-4 col-4 p-0 ">
                                 <div class="small-card-padding">
                                     <div class="card border-r-top-left">
-                                        <h4 class="card-header border-r-top-left">
-                                            Bread
-                                        </h4>
+                                        <div class="card-header border-r-top-left">
+                                            <h4 class="grocery-header">
+                                                Bread
+                                            </h4>
+                                            <input class="grocery-note d-none d-lg-block" placeholder="add detail">
+                                        </div>
+                                     
+                                        
                                         <div class="card-body d-flex justify-content-center">
                                             <img class="card-image" src="https://www.seekpng.com/png/full/863-8638070_bread-png-image-fresh-bread.png"/>
                                         </div> 
-                                        <div class="d-block d-lg-none edit-recipe-container">
+                                        <div class="d-block d-lg-none edit-recipe-container" data-target="#groceryModal" data-toggle="modal">
                                             <i class="fa fa-pencil-square-o ml-auto hvr-grow edit-recipe-icon"></i> 
                                         </div>  
-                                        <button class="grocery-edit-btn btn">
+                                        <div class="mobile-card-clickable-sec d-block d-md-none">
+                                            
+                                        </div>
+                                        <button class="grocery-edit-btn btn" data-toggle="modal" data-target="#groceryModal">
                                             EDIT
                                         </button>
                                     </div>
@@ -163,16 +324,19 @@
                             <div class="col-xl-3 col-lg-4 col-md-3 col-4 p-0 ">
                                 <div class="small-card-padding">
                                     <div class="card border-r-none">
-                                        <h4 class="card-header">
-                                            Very  Tasty Bread
-                                        </h4>
+                                        <div class="card-header border-r-top-left">
+                                            <h4 class="grocery-header">
+                                                Bread
+                                            </h4>
+                                            <input class="grocery-note d-none d-lg-block" value="wheat" placeholder="add detail">
+                                        </div>
                                         <div class="card-body d-flex justify-content-center">
-                                            <img class="card-image" src="https://www.seekpng.com/png/full/863-8638070_bread-png-image-fresh-bread.png"/>
+                                            <img class="card-image" src="https://www.arnoldbread.com/sites/all/files/Full%20Naked%20Loaf_0.png"/>
                                         </div> 
-                                        <div class="d-block d-lg-none edit-recipe-container">
+                                        <div class="d-block d-lg-none edit-recipe-container" data-target="#groceryModal2" data-toggle="modal">
                                             <i class="fa fa-pencil-square-o ml-auto hvr-grow edit-recipe-icon"></i> 
                                         </div>                             
-                                        <button class="grocery-edit-btn btn">
+                                        <button class="grocery-edit-btn btn" data-toggle="modal" data-target="#groceryModal2">
                                             EDIT
                                         </button>
 
@@ -182,9 +346,12 @@
                             <div class="col-xl-3 col-lg-4 col-md-3 col-4 p-0 ">
                                 <div class="small-card-padding">
                                     <div class="card border-r-none">
-                                        <h4 class="card-header">
-                                            Bread
-                                        </h4>
+                                        <div class="card-header">
+                                            <h4 class="grocery-header">
+                                                Bread
+                                            </h4>
+                                            <input class="grocery-note d-none d-lg-block" placeholder="add detail">
+                                        </div>
                                         <div class="card-body d-flex justify-content-center">
                                             <img class="card-image" src="https://www.seekpng.com/png/full/863-8638070_bread-png-image-fresh-bread.png"/>
                                         </div>  
@@ -200,9 +367,12 @@
                             <div class="col-xl-3 col-lg-4 col-md-3 col-4 p-0 ">
                                 <div class="small-card-padding">
                                     <div class="card border-r-none">
-                                        <h4 class="card-header">
-                                            Bread
-                                        </h4>
+                                        <div class="card-header">
+                                            <h4 class="grocery-header">
+                                                Bread
+                                            </h4>
+                                            <input class="grocery-note d-none d-lg-block" placeholder="add detail">
+                                        </div>
                                         <div class="card-body d-flex justify-content-center">
                                             <img class="card-image" src="https://www.seekpng.com/png/full/863-8638070_bread-png-image-fresh-bread.png"/>
                                         </div> 
@@ -218,9 +388,12 @@
                             <div class="col-xl-3 col-lg-4 col-md-3 col-4 p-0 ">
                                 <div class="small-card-padding">
                                     <div class="card border-r-none">
-                                        <h4 class="card-header">
-                                            Bread
-                                        </h4>
+                                        <div class="card-header">
+                                            <h4 class="grocery-header">
+                                                Bread
+                                            </h4>
+                                            <input class="grocery-note d-none d-lg-block" placeholder="add detail">
+                                        </div>
                                         <div class="card-body d-flex justify-content-center">
                                             <img class="card-image" src="https://www.seekpng.com/png/full/863-8638070_bread-png-image-fresh-bread.png"/>
                                         </div> 
@@ -236,9 +409,12 @@
                              <div class="col-xl-3 col-lg-4 col-md-3 col-4 p-0">
                                 <div class="small-card-padding">
                                     <div class="card border-r-none">
-                                        <h4 class="card-header">
-                                            Bread
-                                        </h4>
+                                        <div class="card-header">
+                                            <h4 class="grocery-header">
+                                                Bread
+                                            </h4>
+                                            <input class="grocery-note d-none d-lg-block" placeholder="add detail">
+                                        </div>
                                         <div class="card-body d-flex justify-content-center">
                                             <img class="card-image" src="https://www.seekpng.com/png/full/863-8638070_bread-png-image-fresh-bread.png"/>
                                         </div> 
@@ -254,9 +430,12 @@
                              <div class="col-xl-3 col-lg-4 col-md-3 col-4 p-0">
                                 <div class="small-card-padding">
                                     <div class="card border-r-none">
-                                        <h4 class="card-header">
-                                            Bread
-                                        </h4>
+                                        <div class="card-header">
+                                            <h4 class="grocery-header">
+                                                Bread
+                                            </h4>
+                                            <input class="grocery-note d-none d-lg-block" placeholder="add detail">
+                                        </div>
                                         <div class="card-body d-flex justify-content-center">
                                             <img class="card-image" src="https://www.seekpng.com/png/full/863-8638070_bread-png-image-fresh-bread.png"/>
                                         </div> 
@@ -272,9 +451,12 @@
                              <div class="col-xl-3 col-lg-4 col-md-3 col-4 p-0">
                                 <div class="small-card-padding">
                                     <div class="card border-r-none">
-                                        <h4 class="card-header">
-                                            Bread
-                                        </h4>
+                                        <div class="card-header">
+                                            <h4 class="grocery-header">
+                                                Bread
+                                            </h4>
+                                            <input class="grocery-note d-none d-lg-block" placeholder="add detail">
+                                        </div>
                                         <div class="card-body d-flex justify-content-center">
                                             <img class="card-image" src="https://www.seekpng.com/png/full/863-8638070_bread-png-image-fresh-bread.png"/>
                                         </div> 
@@ -290,9 +472,12 @@
                              <div class="col-xl-3 col-lg-4 col-md-3 col-4 p-0">
                                 <div class="small-card-padding">
                                     <div class="card border-r-none">
-                                        <h4 class="card-header">
-                                            Bread
-                                        </h4>
+                                        <div class="card-header">
+                                            <h4 class="grocery-header">
+                                                Bread
+                                            </h4>
+                                            <input class="grocery-note d-none d-lg-block" placeholder="add detail">
+                                        </div>
                                         <div class="card-body d-flex justify-content-center">
                                             <img class="card-image" src="https://www.seekpng.com/png/full/863-8638070_bread-png-image-fresh-bread.png"/>
                                         </div> 
@@ -308,9 +493,12 @@
                              <div class="col-xl-3 col-lg-4 col-md-3 col-4 p-0">
                                 <div class="small-card-padding">
                                     <div class="card border-r-none">
-                                        <h4 class="card-header">
-                                            Bread
-                                        </h4>
+                                        <div class="card-header">
+                                            <h4 class="grocery-header">
+                                                Bread
+                                            </h4>
+                                            <input class="grocery-note d-none d-lg-block" placeholder="add detail">
+                                        </div>
                                         <div class="card-body d-flex justify-content-center">
                                             <img class="card-image" src="https://www.seekpng.com/png/full/863-8638070_bread-png-image-fresh-bread.png"/>
                                         </div> 
@@ -326,9 +514,12 @@
                              <div class="col-xl-3 col-lg-4 col-md-3 col-4 p-0">
                                 <div class="small-card-padding">
                                     <div class="card border-r-none">
-                                        <h4 class="card-header">
-                                            Bread
-                                        </h4>
+                                        <div class="card-header">
+                                            <h4 class="grocery-header">
+                                                Bread
+                                            </h4>
+                                            <input class="grocery-note d-none d-lg-block" placeholder="add detail">
+                                        </div>
                                         <div class="card-body d-flex justify-content-center">
                                             <img class="card-image" src="https://www.seekpng.com/png/full/863-8638070_bread-png-image-fresh-bread.png"/>
                                         </div> 
@@ -344,9 +535,12 @@
                              <div class="col-xl-3 col-lg-4 col-md-3 col-4 p-0">
                                 <div class="small-card-padding">
                                     <div class="card border-r-none">
-                                        <h4 class="card-header">
-                                            Bread
-                                        </h4>
+                                        <div class="card-header">
+                                            <h4 class="grocery-header">
+                                                Bread
+                                            </h4>
+                                            <input class="grocery-note d-none d-lg-block" placeholder="add detail">
+                                        </div>
                                         <div class="card-body d-flex justify-content-center">
                                             <img class="card-image" src="https://www.seekpng.com/png/full/863-8638070_bread-png-image-fresh-bread.png"/>
                                         </div> 
@@ -362,9 +556,12 @@
                              <div class="col-xl-3 col-lg-4 col-md-3 col-4 p-0">
                                 <div class="small-card-padding">
                                     <div class="card border-r-bottom-left">
-                                        <h4 class="card-header">
-                                            Bread
-                                        </h4>
+                                        <div class="card-header">
+                                            <h4 class="grocery-header">
+                                                Bread
+                                            </h4>
+                                            <input class="grocery-note d-none d-lg-block" placeholder="add detail">
+                                        </div>
                                         <div class="card-body d-flex justify-content-center">
                                             <img class="card-image" src="https://www.seekpng.com/png/full/863-8638070_bread-png-image-fresh-bread.png"/>
                                         </div> 
@@ -380,9 +577,12 @@
                              <div class="col-xl-3 col-lg-4 col-md-3 col-4 p-0">
                                 <div class="small-card-padding">
                                     <div class="card border-r-none">
-                                        <h4 class="card-header">
-                                            Bread
-                                        </h4>
+                                        <div class="card-header">
+                                            <h4 class="grocery-header">
+                                                Bread
+                                            </h4>
+                                            <input class="grocery-note d-none d-lg-block" placeholder="add detail">
+                                        </div>
                                         <div class="card-body d-flex justify-content-center">
                                             <img class="card-image" src="https://www.seekpng.com/png/full/863-8638070_bread-png-image-fresh-bread.png"/>
                                         </div> 
@@ -398,9 +598,12 @@
                              <div class="col-xl-3 col-lg-4 col-md-3 col-4 p-0">
                                 <div class="small-card-padding">
                                     <div class="card border-r-bottom-right">
-                                        <h4 class="card-header">
-                                            Bread
-                                        </h4>
+                                        <div class="card-header">
+                                            <h4 class="grocery-header">
+                                                Bread
+                                            </h4>
+                                            <input class="grocery-note d-none d-lg-block" placeholder="add detail">
+                                        </div>
                                         <div class="card-body d-flex justify-content-center">
                                             <img class="card-image" src="https://www.seekpng.com/png/full/863-8638070_bread-png-image-fresh-bread.png"/>
                                         </div> 

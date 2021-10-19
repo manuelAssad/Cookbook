@@ -1,11 +1,9 @@
 
 
 
-// html,body {
-//     font-family: Space Grotesk;
-//     max-width: 100vw;
-//     overflow-x: hidden;
-// }
+body {
+    font-family: Space Grotesk;
+}
 
 #contact{
     max-width: 100vw;
@@ -15,6 +13,32 @@
 label{
     margin:auto
 }
+
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus, select:focus {   
+    border-color: #ced4da !important;
+    box-shadow: 0 1px 1px #7ca98210 inset, 0 0 18px #7ca9826e !important;
+    outline: 0 none !important;
+}
+
+select{
+    font-size:12px
+}
+
+#groceryName::placeholder, #groceryDetail::placeholder{
+    color:#ced4da;
+    font-size: 13px;
+}
+
+#groceryDetail{
+    font-size: 13px;
+}
+
+
+button:focus {   
+    box-shadow: 0 1px 1px #7ca98210 inset, 0 0 18px #7ca9826e !important;
+    outline: 0 none !important;
+}
+
 
 h1 {
     font-weight: 600;
@@ -543,10 +567,15 @@ a,a:hover{
     display: none;
     background-color: #7ca982;
     color:#f1f7ed;
+
 }
 
 
 @media (min-width: 992px) {
+    .grocery-header:hover{
+        text-decoration: line-through;
+        text-decoration-color: red;
+    }
     .card:hover{
         border-color: #243e36 ;
         position: relative;
@@ -573,8 +602,9 @@ a,a:hover{
         .card-header:hover{
             background-color: #e0eec6;
             cursor: pointer;
-            text-decoration: line-through;
-            text-decoration-color: red;
+            .grocery-note::placeholder{
+                color:rgb(187, 187, 187)
+            }
         }
     }
     
@@ -593,14 +623,32 @@ a,a:hover{
     .card{
         background-color: #f1f7ed;
     }
-    .card:hover{
-        background-color: #e0eec6;
-        .card-header{
-            background-color: #e0eec6;
-        }
+    // .card:hover{
+    //     background-color: #e0eec6;
+    //     .card-header{
+    //         background-color: #e0eec6;
+    //     }
+    // }
+
+    .mobile-card-clickable-sec{
+        position: absolute;
+        top:0;
+        height:calc(100% - 30px);
+        width:100%;
+        background-color: rgba(0,0,0,0);
+        z-index: 99;
+    }
+
+    .mobile-card-clickable-sec:hover{
+        background-color: #7ca982;
+        opacity: 0.4;
+        height:100%;
+        
     }
 
 }
+
+
 
 .card-header {
     border-width: 0px;
@@ -618,7 +666,9 @@ a,a:hover{
     position: relative;
     z-index: 999;
     object-fit: contain;
+    
 }
+
 
 .card-body{
     padding: 0;
@@ -629,7 +679,7 @@ a,a:hover{
 }
 
 .grocery-container{
-    min-height: 250px;
+    min-height: 50vh;
 }
 
 .small-card-padding{
@@ -666,11 +716,11 @@ a,a:hover{
 }
 
 .edit-recipe-container{
-    background-color:rgba(0,0,0,0);
+    background-color:rgba(0,0,0,0.03);
     width:100%;
     height:30px;
     position:absolute;
-    z-index: 1;
+    z-index: 999;
     bottom:0;
 }
 
@@ -704,7 +754,6 @@ a,a:hover{
     padding-bottom: 70vh;
     overflow-y:auto;
     display: none;
-    background-color: #f4f8ed;
     border-radius: 3px;
     margin-left:-16px
 }
@@ -714,20 +763,19 @@ a,a:hover{
     color:#243e36 !important;
     border-color: #ced4da;
     padding:0 30px;
-    border-radius: 0 3px 0 0 !important; 
+    border-radius: 0 3px 3px 0 !important; 
     display: none;
 }
 
 @media (min-width: 992px) {
     .ingredient-search{
-        border-radius: 3px 3px 0 0;
         margin-top: 0px;
         margin-bottom: 0px;
     }
     .search-box{
         max-height: 210px;
         border-radius: 0 0 3px 3px;
-        margin-top: 50px;
+        margin-top: 54px;
         width:100%;
         margin-left:0;
         padding-bottom: 3px;
@@ -758,7 +806,6 @@ a,a:hover{
 .search-cat{
     font-size: 18px;
     font-weight: 600;
-    border-bottom: solid #ced4da 1px;
     margin-bottom: 10px;
     padding: 10px;
     text-align: center;
@@ -788,3 +835,112 @@ a,a:hover{
 //     padding:5px 10px;
 //     border-radius:100px;
 // }
+
+.grocery-header {
+    font-size: 12px;
+}
+
+
+@media (min-width: 576px) {
+    .grocery-header {
+        font-size: 14px;
+    }
+}
+@media (min-width: 992px) {
+    .grocery-header {
+        font-size: 16px;
+    }
+}
+
+.grocery-note {
+    font-size: 11px;
+    position: absolute;
+    width:90%;
+    left: 5%;
+    top:30px;
+    border:0;
+    background-color: #f1f7ed;
+    text-align: center;
+    overflow:hidden; 
+    white-space:nowrap; 
+    text-overflow: ellipsis;
+    color:grey
+
+}
+
+.grocery-note::placeholder{
+    color: #f1f7ed;
+}
+
+.added-item{
+    color:inherit
+}
+
+.grocery-modal-image{
+    position: relative;
+    z-index: 99;
+    height:110px;
+    object-fit: contain;
+    width:100%
+}
+.gorcery-image-container{
+    position: relative;
+}
+.default-button{
+    position: absolute;
+    z-index: 999;
+    bottom:0px;
+    right:0px;
+    background-color: rgba(128, 128, 128, 0.527);
+    padding:3px;
+    border-radius: 3px;
+    color:white;
+    font-size: 12px;
+}
+.custom-image{
+    position: absolute;
+    z-index: 9;
+    bottom:-18px;
+    left:auto;
+    color:#243e36;
+    text-decoration: underline;
+    font-size: 12px;
+    overflow:hidden;
+    white-space: nowrap;
+}
+
+
+
+.grocery-modal-button-1{
+    width: 100%;
+    background-color: #7ca982;
+    border-color: #7ca982;
+    color:#f1f7ed
+}
+
+.grocery-modal-button-2{
+    width: 100%;
+    background-color: rgb(160, 9, 9);
+    border-color: rgb(160, 9, 9);
+    color:#f1f7ed
+}
+
+.grocery-modal-button-1:focus, .grocery-modal-button-1:hover {
+    color:#f1f7ed
+}
+
+.grocery-modal-button-2:focus, .grocery-modal-button-2:hover {
+    color:#f1f7ed
+}
+
+.checkbox-grocery{
+    font-size: 12px;
+}
+
+.checkbox-label-grocery{
+    margin-top:3px
+}
+
+.lightgreen-bg{
+    background-color:#f1f7ed
+}
