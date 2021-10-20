@@ -31,7 +31,7 @@
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item px-3 px-lg-0 pr-lg-3 mb-3 mb-lg-0"><a class="nav-link" href="index.html"> Home</a></li>
                 <li class="nav-item px-3 mb-sm-3 mb-3 mb-lg-0"><a class="nav-link" href="grocery.html">My List</a></li>
-                <li class="nav-item px-3 mb-sm-3 mb-3 mb-lg-0"><a class="nav-link" href="#"> Recipes</a></li>
+                <li class="nav-item px-3 mb-sm-3 mb-3 mb-lg-0 active"><a class="nav-link" href="#"> Recipes</a></li>
 
             </ul>
             
@@ -43,10 +43,258 @@
             
         </div>
 
+        <div class="input-group d-flex d-lg-none">
+            <label for="ingredient" class="input-group-prepend">
+                <span  class="input-group-text ingredient-search bg-ing" id="basic-addon1"><i class="fa fa-search ml-auto hvr-grow"></i></span>
+            </label>
+            <input id="ingredient" type="text" class="form-control ingredient-search ingredient-search-input" placeholder="Search for Recipe" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            </input>
+           
+            
+        </div>
+
     </nav>
 
-    <div class="container">
-        RECIPE
+    <div class="mobile-tabs d-flex d-lg-none">
+        <div class="mr-1 mobile-tab-item-active">
+            All Recipes
+        </div>
+        <div class="mr-1 mobile-tab-item">
+            Main Course
+        </div>
+        <div class="mr-1 mobile-tab-item">
+            Side Dishes
+        </div>
+        <div class="mr-1 mobile-tab-item">
+            Desserts
+        </div>
+    </div>
+
+
+    <div class="grocery-container px-4">
+        <div class="row">
+            <div class="d-none d-lg-block col-lg-4 col-xl-3 py-5 sticky-menu ">
+                <div class="list-group" id="list-tab" role="tablist">
+                  
+                        <div class="input-group ing-search-container mb-2">
+                            <label for="recipe2" class="input-group-prepend">
+                                <span  class="input-group-text ingredient-search bg-ing" id="basic-addon1"><i class="fa fa-search ml-auto hvr-grow"></i></span>
+                            </label>
+                            <input id="recipe2" type="text" class="form-control ingredient-search ingredient-search-input" placeholder="Search for Recipe" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            </input>
+                        
+                            <div class="search-box">
+
+                                <div class="search-cat">Suggested Recipes</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom">Chicken Alfredo</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom">Pepperoni Pizza</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom">BBQ Burger</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom">Cookies & Cream Ice Cream</div>
+                                <div class="mb-1 pb-2 ml-1 border-bottom">Apple Tart</div>
+                            </div>
+                            
+                        </div>
+                    
+                
+                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">All Recipes</a>
+                    <a class="list-group-item list-group-item-action " id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Main Course</a>
+                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Side Dishes</a>
+                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Desserts</a>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-lg-7 col-xl-8 offset-xl-3 offset-lg-4 pt-lg-5 pl-lg-5">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                       
+                        <div class="row">
+                            <div class="col-xl-4 col-md-6 col-12 p-2 hvr-grow">
+                                <div class="recipe-card-container">
+                                    <div class="d-flex edit-buttons">
+                                        <div class="edit-dot"></div>
+                                        <div class="edit-dot"></div>
+                                        <div class="edit-dot"></div>
+                                    </div>
+                                    <div class="recipe-image-gradient">
+                                        <img class="w-100" src="https://www.ochd.org/wp-content/uploads/2020/01/g-shopping-1200x630.jpg" alt="Breadcrumb Trail Campground"/>
+                                    </div>
+                                    <div class="recipe-title">
+                                        Chicken Alfredo
+                                    </div>
+                                    <div class="recipe-details container align-items-end">
+                                        
+                                        <div>
+                                            2 servings
+                                        </div>
+                                        <div class="ml-3">
+                                            <i class="fa fa-clock-o"></i> 
+                                            
+                                            <span class="ml-1">20 min</span>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <div>
+                                                Prep Time
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="mx-auto">
+                                                45 min
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6 col-12 p-2">
+                                <div class="recipe-card-container">
+                                    <div class="recipe-image-gradient">
+                                        <img class="w-100" src="https://www.ochd.org/wp-content/uploads/2020/01/g-shopping-1200x630.jpg" alt="Breadcrumb Trail Campground"/>
+                                    </div>
+                                    <div class="recipe-title">
+                                        Chicken Alfredo
+                                    </div>
+                                    <div class="recipe-details container align-items-end">
+                                        
+                                        <div>
+                                            2 servings
+                                        </div>
+                                        <div class="ml-3">
+                                            <i class="fa fa-clock-o"></i> 
+                                            
+                                            <span class="ml-1">20 min</span>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <div>
+                                                Prep Time
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="mx-auto">
+                                                45 min
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="col-xl-4 col-md-6 col-12 p-2">
+                                <div class="recipe-card-container">
+                                    <div class="recipe-image-gradient">
+                                        <img class="w-100" src="https://www.ochd.org/wp-content/uploads/2020/01/g-shopping-1200x630.jpg" alt="Breadcrumb Trail Campground"/>
+                                    </div>
+                                    <div class="recipe-title">
+                                        Chicken Alfredo
+                                    </div>
+                                    <div class="recipe-details container align-items-end">
+                                        
+                                        <div>
+                                            2 servings
+                                        </div>
+                                        <div class="ml-3">
+                                            <i class="fa fa-clock-o"></i> 
+                                            
+                                            <span class="ml-1">20 min</span>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <div>
+                                                Prep Time
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="mx-auto">
+                                                45 min
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="col-xl-4 col-md-6 col-12 p-2">
+                                <div class="recipe-card-container">
+                                    <div class="recipe-image-gradient">
+                                        <img class="w-100" src="https://www.ochd.org/wp-content/uploads/2020/01/g-shopping-1200x630.jpg" alt="Breadcrumb Trail Campground"/>
+                                    </div>
+                                    <div class="recipe-title">
+                                        Chicken Alfredo
+                                    </div>
+                                    <div class="recipe-details container align-items-end">
+                                        
+                                        <div>
+                                            2 servings
+                                        </div>
+                                        <div class="ml-3">
+                                            <i class="fa fa-clock-o"></i> 
+                                            
+                                            <span class="ml-1">20 min</span>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <div>
+                                                Prep Time
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="mx-auto">
+                                                45 min
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="col-xl-4 col-md-6 col-12 p-2">
+                                <div class="recipe-card-container">
+
+                                    <div class="d-flex edit-buttons">
+                                        <div class="edit-dot"></div>
+                                        <div class="edit-dot"></div>
+                                        <div class="edit-dot"></div>
+                                    </div>
+
+                                    <div class="recipe-image-gradient">
+                                        <img class="w-100" src="https://www.ochd.org/wp-content/uploads/2020/01/g-shopping-1200x630.jpg" alt="Breadcrumb Trail Campground"/>
+                                    </div>
+                                    <div class="recipe-title">
+                                        Chicken Alfredo
+                                    </div>
+                                    <div class="recipe-details container align-items-end">
+                                        
+                                        <div>
+                                            2 servings
+                                        </div>
+                                        <div class="ml-3">
+                                            <i class="fa fa-clock-o"></i> 
+                                            
+                                            <span class="ml-1">20 min</span>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <div>
+                                                Prep Time
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="mx-auto">
+                                                45 min
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                  
+                                  
+                        </div>
+                       
+                    </div>
+  
+  
+  
+  
+                  <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                  </div>
+                  <div class="tab-pane fade " id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                  </div>
+                  <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                  </div>
+                </div>
+              </div>
+
+        </div>
+
     </div>
 
     <footer>
